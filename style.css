@@ -1,0 +1,46 @@
+body
+{
+    background-color: #873e23;
+    font-family: cursive;
+}
+main
+{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 80rem;
+}
+.title
+{
+    text-align: center;
+    font-size: 4rem;
+    color: #f6c72c;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    text-shadow: 3px 3px 8px black;
+}
+.ours
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: beige;
+    box-shadow: 3px 3px 8px black;
+}
+img
+{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 3rem;
+    box-shadow: 3px 3px 3px grey;
+}
+.choosecolor
+{
+    height: 2rem;
+}
