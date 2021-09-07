@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>Orinoco - Produit</title>
+    <title>Orinoco</title>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="panier.html">Panier</a>
+        <a href="confirm.html">Commande</a>
+    </nav>
+
     <h1 class="title">Orinoco</h1>
+    <main class="main mainproduct" id="main">
+        <template id="templateProduit">
+            <div class="ours_link" id="ours_link">
+                <div id="produit" class="bearcard">
+                    <h2 id="ours_title" class="ours_title">TITRE</h2>
+                    <p id="ours_price" class="ours_price">PRIX</p>
+                    <img id="ours_picture" class="ours_picture">
+                    <p id="ours_body" class="ours_body"></p>
+                    <div class="colorsAdd">
+                        <a class="add" href="panier.html">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <script src="produit.js"></script>
 </body>
 </html>

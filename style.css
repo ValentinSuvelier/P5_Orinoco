@@ -3,6 +3,20 @@ body
     background-color: #873e23;
     font-family: cursive;
 }
+a
+{
+    text-decoration: none;
+    color: #f6c72c;
+    cursor: pointer;
+}
+nav
+{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 2rem 2rem 0 0;
+    font-size: 1.5rem;
+}
 main
 {
     margin: auto;
@@ -20,9 +34,8 @@ main
     margin-top: 2rem;
     text-shadow: 3px 3px 8px black;
 }
-.ours
+.ours_link
 {
-    cursor: pointer;
     text-decoration: none;
     color: black;
     border: 3px solid black;
@@ -40,7 +53,29 @@ img
     border-radius: 3rem;
     box-shadow: 3px 3px 3px grey;
 }
+
+/*------CSS page Produit------*/
+
+.mainproduct
+{
+    margin: auto;
+    display: flex;
+    max-width: 32rem;
+}
 .choosecolor
 {
     height: 2rem;
+}
+.colorsAdd
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.add
+{
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: #873e23;
+    padding: 0.5rem;
 }
