@@ -1,6 +1,5 @@
 function getProduitId()
 {
-   
     let id = new URL(location.href).searchParams.get("id");
     return id;
 }

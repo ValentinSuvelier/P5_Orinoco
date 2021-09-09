@@ -17,7 +17,7 @@ nav
     padding: 2rem 2rem 0 0;
     font-size: 1.5rem;
 }
-main
+.main
 {
     margin: auto;
     display: grid;
@@ -78,4 +78,33 @@ img
     border-radius: 1rem;
     background-color: #873e23;
     padding: 0.5rem;
+}
+
+/*---------CSS page Panier--------*/
+
+.votre_panier
+{
+    border: 1px solid beige;
+    background-color: beige;
+    border-radius: 4rem;
+    box-shadow: 3px 3px 8px black;
+    margin: 1rem;
+}
+.panier_h2
+{
+    margin-left: 2rem;
+}
+.grid_panier
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: white;
+    margin: 2rem;
+}
+.p_panier
+{
+    margin: 1rem auto;
 }
