@@ -1,3 +1,19 @@
+/*-------ajoute une condition au survol du liens-------
+
+let a = document.querySelector("a");
+a.addEventListener("mouseover",() =>
+{
+    document.body.style.backgroundColor = 'black';
+});
+a.addEventListener("mouseout",() =>
+{
+    document.body.style.backgroundColor = '#873e23';
+});
+
+*/
+
+
+
 function getProduitId()
 {
     let id = new URL(location.href).searchParams.get("id");
@@ -43,10 +59,25 @@ function displayArticle(produit)
     }
 }
 
+function postProduct(article){
+    let oursStorage = {
+        name: article.name,
+        price: article.price / 100 + ".00€",
+        description: article.description
+      };
+      localStorage.setItem('monOurs', JSON.stringify(oursStorage));
+}
+
     async function main()
 {
         const produit = await getArticles()
         displayArticle(produit)
+
+        let teddy = postProduct(produit);
+        
+        const btn = document.querySelector(".add");
+        btn.addEventListener("click", teddy);
 }
 
 main()
+
