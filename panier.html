@@ -18,9 +18,18 @@
         <section class="votre_panier">
             <h2 class="panier_h2">Votre Panier</h2>
             <div class="grid_panier">
-                <h3 class="produit_panier p_panier">Produit</p>
-                <h3 class="prix_produit p_panier">Prix</p>
-                <h3 class="total p_panier">TOTAL</p>
+                <div class="flex_column">
+                    <h3 class="produit_panier p_panier">Produit</h3>
+                        <div id="produit_descript" class="info_panier">Ours + description</div>
+                </div>  
+                <div class="flex_column"> 
+                    <h3 class="prix_produit p_panier">Prix</h3>
+                        <div id="price" class="info_panier">Prix de l'article</div>
+                </div>
+                <div class="flex_column">
+                    <h3 class="total p_panier">TOTAL</h3>
+                        <div id="total_euro" class="info_panier">Prix total de la commande</div>
+                </div>
             </div>
         </section>
 
@@ -29,31 +38,33 @@
             <div class="grid_commande">
                 <div class="flex_column">
                     <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" class="input_text" pattern="[A-Za-z]" required>
                 </div>
                 <div class="flex_column">
                     <label for="lastname">Nom</label>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" class="input_text" required>
                 </div>
                 <div class="adresse_mail">
                     <label for="mail">Adresse e-mail</label>
-                    <input type="email" id="mail" name="mail">
+                    <input type="email" id="mail" name="mail" class="input_text" required>
                 </div>
                 <div class="adresse_domicile">
                     <label for="address">Adresse</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" class="input_text" required>
                 </div>
                 <div class="flex_column">
                     <label for="postal">Code postal</label>
-                    <input type="number" id="postal" name="postal">
+                    <input type="number" id="postal" name="postal" class="input_number" required>
                 </div>
                 <div class="flex_column">
                     <label for="city">Ville</label>
-                    <input type="text" id="city" name="city">
+                    <input type="text" id="city" name="city" class="input_text" required>
                 </div>
             </div>
+            <a href="confirm.html" class="btn_envoyer">
+                <button>ENVOYER</button>
+            </a>
         </section>
-
     </main>
 
     <script src="panier.js"></script>

@@ -1,19 +1,3 @@
-/*-------ajoute une condition au survol du liens-------
-
-let a = document.querySelector("a");
-a.addEventListener("mouseover",() =>
-{
-    document.body.style.backgroundColor = 'black';
-});
-a.addEventListener("mouseout",() =>
-{
-    document.body.style.backgroundColor = '#873e23';
-});
-
-*/
-
-
-
 function getProduitId()
 {
     let id = new URL(location.href).searchParams.get("id");
@@ -66,18 +50,18 @@ function postProduct(article){
         description: article.description
       };
       localStorage.setItem('monOurs', JSON.stringify(oursStorage));
+      //localStorage.setItem(article._id, JSON.stringify(oursStorage));
+      btn.addEventListener("click", teddy);
 }
+
 
     async function main()
 {
         const produit = await getArticles()
-        displayArticle(produit)
-
+        displayArticle(produit);
         let teddy = postProduct(produit);
         
         const btn = document.querySelector(".add");
-        btn.addEventListener("click", teddy);
 }
 
 main()
-

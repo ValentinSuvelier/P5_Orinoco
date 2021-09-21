@@ -1,3 +1,5 @@
+/*------CSS page Index------*/
+
 body
 {
     background-color: #873e23;
@@ -98,7 +100,6 @@ img
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     border: 1px solid black;
     border-radius: 1rem;
     background-color: white;
@@ -107,6 +108,10 @@ img
 .p_panier
 {
     margin: 1rem auto;
+}
+.info_panier
+{
+    text-align: center;
 }
 .grid_commande
 {
@@ -139,4 +144,15 @@ input
 {
     height: 2rem;
     border-radius: 0.5rem;
+}
+button
+{
+    padding: 1rem;
+    margin: 0 0 2rem 2rem;
+    border-radius: 1rem;
+    font-family: cursive;
+    font-size: 1rem;
+    color: #f6c72c;
+    background-color:  #873e23;
+    width: 10rem;
 }
