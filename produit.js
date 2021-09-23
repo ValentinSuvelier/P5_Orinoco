@@ -49,9 +49,12 @@ function postProduct(article){
         price: article.price / 100 + ".00€",
         description: article.description
       };
-      localStorage.setItem('monOurs', JSON.stringify(oursStorage));
+      const btn = document.querySelector(".add");
+      btn.addEventListener("click", function(){
+          localStorage.setItem('monOurs', JSON.stringify(oursStorage))
+        });
       //localStorage.setItem(article._id, JSON.stringify(oursStorage));
-      btn.addEventListener("click", teddy);
+      //btn.addEventListener("click", teddy);
 }
 
 
