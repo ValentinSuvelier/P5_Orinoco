@@ -15,24 +15,25 @@
 
     <h1 class="title">Orinoco</h1>
     <main>
-        <section class="votre_panier">
-            <h2 class="panier_h2">Votre Panier</h2>
-            <div class="grid_panier">
-                <div class="flex_column">
-                    <h3 class="produit_panier p_panier">Produit</h3>
-                        <div id="produit_descript" class="info_panier">Ours + description</div>
-                </div>  
-                <div class="flex_column"> 
-                    <h3 class="prix_produit p_panier">Prix</h3>
-                        <div id="price" class="info_panier">Prix de l'article</div>
+            <section class="votre_panier">
+                <h2 class="panier_h2">Votre Panier</h2>
+                <div class="grid_panier">
+                    <template>
+                        <div class="flex_column">
+                            <h3 class="produit_panier p_panier">Produit</h3>
+                                <div id="produit_descript" class="info_panier">Ours + description</div>
+                        </div>  
+                        <div class="flex_column"> 
+                            <h3 class="prix_produit p_panier">Prix</h3>
+                                <div id="price" class="info_panier">Prix de l'article</div>
+                        </div>
+                        <div class="flex_column">
+                            <h3 class="total p_panier">TOTAL</h3>
+                            <div id="total_euro" class="info_panier">Prix total de la commande</div>
+                        </div>
+                    </template>
                 </div>
-                <div class="flex_column">
-                    <h3 class="total p_panier">TOTAL</h3>
-                        <div id="total_euro" class="info_panier">Prix total de la commande</div>
-                </div>
-            </div>
-        </section>
-
+            </section>
         <section class="votre_panier">
             <h2 class="panier_h2">Passer commande</h2>
             <div class="grid_commande">
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <a href="confirm.html" class="btn_envoyer">
-                <button>ENVOYER</button>
+                <input type="submit" value="Envoyer le formulaire" class="envoyer">
             </a>
         </section>
     </main>

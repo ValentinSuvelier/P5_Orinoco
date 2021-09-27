@@ -24,7 +24,7 @@ function displayArticle(produit)
     const clone = document.importNode(template.content, true);
     //récupère les éléments de l'API pour les caractéristique ciblées
     clone.getElementById("ours_title").textContent = produit.name;
-    clone.getElementById("ours_price").textContent = produit.price / 100 + ".00€";
+    clone.getElementById("ours_price").textContent = produit.price / 100;
     clone.querySelector(".ours_picture").setAttribute("src", produit.imageUrl);
     clone.getElementById("ours_body").textContent = produit.description;
     clone.getElementById("ours_link").href += `?id=${produit._id}`;
@@ -43,28 +43,37 @@ function displayArticle(produit)
     }
 }
 
-function postProduct(article){
+
+    
+    
+    
+function pushArticle(article){
     let oursStorage = {
         name: article.name,
-        price: article.price / 100 + ".00€",
+        price: article.price / 100,
         description: article.description
       };
-      const btn = document.querySelector(".add");
-      btn.addEventListener("click", function(){
-          localStorage.setItem('monOurs', JSON.stringify(oursStorage))
-        });
-      //localStorage.setItem(article._id, JSON.stringify(oursStorage));
-      //btn.addEventListener("click", teddy);
+
+    let articleArray = [];
+
+    document.querySelector(".add").addEventListener("click", function(){
+        if(localStorage.getItem("panier")){
+            let array = JSON.parse(localStorage.getItem("panier"));
+            console.log(array);
+            array.push(oursStorage);
+            localStorage.setItem("panier", JSON.stringify(array));
+        }
+        else{
+            articleArray.push(oursStorage)
+            localStorage.setItem("panier", JSON.stringify(articleArray));
+        }
+    })
 }
 
-
-    async function main()
+async function main()
 {
         const produit = await getArticles()
         displayArticle(produit);
-        let teddy = postProduct(produit);
-        
-        const btn = document.querySelector(".add");
+        pushArticle(produit);
 }
-
 main()
