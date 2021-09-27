@@ -99,7 +99,7 @@ img
 .grid_panier
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border: 1px solid black;
     border-radius: 1rem;
     background-color: white;
@@ -107,11 +107,13 @@ img
 }
 .p_panier
 {
+    text-align: center;
     margin: 1rem auto;
 }
 .info_panier
 {
     text-align: center;
+    margin-bottom: 2rem;
 }
 .grid_commande
 {

@@ -24,7 +24,7 @@ function displayArticle(produit)
     const clone = document.importNode(template.content, true);
     //récupère les éléments de l'API pour les caractéristique ciblées
     clone.getElementById("ours_title").textContent = produit.name;
-    clone.getElementById("ours_price").textContent = produit.price / 100;
+    clone.getElementById("ours_price").textContent = produit.price / 100 + '.00€';
     clone.querySelector(".ours_picture").setAttribute("src", produit.imageUrl);
     clone.getElementById("ours_body").textContent = produit.description;
     clone.getElementById("ours_link").href += `?id=${produit._id}`;
