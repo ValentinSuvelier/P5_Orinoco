@@ -7,13 +7,15 @@
     <title>Orinoco - Panier</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="panier.html">Panier</a>
-        <a href="confirm.html">Commande</a>
-    </nav>
+    <div class="navbox">
+        <img class="ours_logo" src="ours_logo.png">
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="panier.html">Panier</a>
+            <a href="confirm.html">Commande</a>
+        </nav>
+    </div>
 
-    <h1 class="title">Orinoco</h1>
     <main>
             <section class="votre_panier">
                 <h2 class="panier_h2">Votre Panier</h2>
@@ -26,17 +28,17 @@
                     </template>
                 </div>
                 <h3 class="total p_panier">TOTAL</h3>
-                    <div id="total_euro" class="info_panier">Prix total de la commande</div>
+                    <div id="total_euro" class="info_panier">Prix total de la commande : 0.00€</div>
             </section>
 
         <section class="votre_panier">
             <h2 class="panier_h2">Passer commande</h2>
             <div class="grid_commande">
-                <div class="flex_column">
+                <div class="flex_column firstname">
                     <label for="firstname">Prénom</label>
                     <input type="text" id="firstname" name="firstname" class="input_text" pattern="[A-Za-z]" required>
                 </div>
-                <div class="flex_column">
+                <div class="flex_column lastname">
                     <label for="lastname">Nom</label>
                     <input type="text" id="lastname" name="lastname" class="input_text" required>
                 </div>
@@ -48,11 +50,11 @@
                     <label for="address">Adresse</label>
                     <input type="text" id="address" name="address" class="input_text" required>
                 </div>
-                <div class="flex_column">
+                <div class="flex_column postal">
                     <label for="postal">Code postal</label>
                     <input type="number" id="postal" name="postal" class="input_number" required>
                 </div>
-                <div class="flex_column">
+                <div class="flex_column city">
                     <label for="city">Ville</label>
                     <input type="text" id="city" name="city" class="input_text" required>
                 </div>

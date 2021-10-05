@@ -20,11 +20,3 @@ function main()
 }
 
 main()
-
-/*let getOursStorage = localStorage.getItem("panier");
-    console.log(getOursStorage + 'connard');
-    let ours = JSON.parse(getOursStorage);
-
-    for(article of getOursStorage){
-        displayArticle(article);
-        }*/

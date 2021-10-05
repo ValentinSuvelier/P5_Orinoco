@@ -7,15 +7,34 @@
     <title>Orinoco - Confirmation de commande</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="panier.html">Panier</a>
-        <a href="confirm.html">Commande</a>
-    </nav>
-
-    <h1 class="title">Orinoco</h1>
+    <div class="navbox">
+        <img class="ours_logo" src="ours_logo.png">
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="panier.html">Panier</a>
+            <a href="confirm.html">Commande</a>
+        </nav>
+    </div>
+    
     <main>
-        <h2>Votre Panier</h2>
+        <section class="confirmation">
+            <h2 class="confirm_h2">Confirmation de votre commande</h2>
+            <div>
+                <p>Nous vous remercions pour votre commande n° <div class="commande_id"></div>, vous recevrez un mail de confirmation d'envoi dans quelques instants.</p>
+            </div>
+
+            <div class="commande">
+                <div class="produit_commande">
+                    <h3>Vos articles</h3>
+                    <div id="produit_descript">Ours</div>
+                </div>
+                <div class="total_commande">
+                    <h3>Total</h3>
+                    <div id="produit_descript">Total à payer</div>
+                </div>
+            
+            </div>
+        </section>
     </main>
     
     <script src="confirm.js"></script>
