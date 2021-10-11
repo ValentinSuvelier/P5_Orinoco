@@ -187,7 +187,19 @@ input
 {
     margin-left: 2rem;
 }
-
+.flexcommand
+{
+    display: flex;
+}
+.commande
+{
+    text-align: center;
+}
+.commande_id
+{
+    display: flex;
+    align-items: center;
+}
 
 
 @media all and (max-width: 770px)
