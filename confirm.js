@@ -1,6 +1,7 @@
-//Math.floor arrondie au nombre entier et Math.random prend un nombre entre 0.1 et 0.9
+let confirmation = document.querySelector('.commande_id').textContent = localStorage.getItem('orderID');
+    //localStorage.clear();
+/*Math.floor arrondie au nombre entier et Math.random prend un nombre entre 0.1 et 0.9
 let nombreAleatoire = Math.floor(Math.random() * 999999999);
-console.log('ID aléatoire : ' + nombreAleatoire)
 
 
 async function main()
@@ -13,7 +14,9 @@ async function main()
     }
     console.log('prix total ' + total);
     document.querySelector(".total").textContent = total + '.00€' + ' (+ 10.99€ de frais de port) soit ' + (total + 10.99 + '€');
-    document.querySelector(".commande_id").textContent = nombreAleatoire;
+    //document.querySelector(".commande_id").textContent = nombreAleatoire;
+    let confirmation = document.querySelector('.commande_id').textContent = localStorage.getItem('orderID');
+    localStorage.clear();
 }
 
-main()
+main()*/
