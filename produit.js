@@ -51,7 +51,8 @@ function pushArticle(article){
     let oursStorage = {
         name: article.name,
         price: article.price / 100,
-        description: article.description
+        description: article.description,
+        id: article._id
       };
 
     let articleArray = [];

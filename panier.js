@@ -24,17 +24,15 @@ function listForm(){
     const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
     let mail = document.querySelector(".email");
     let address = document.querySelector(".address");
-    let codePostal = document.querySelector(".postal");
-    let city = document.querySelector(".city");
-    let firstname = document.querySelector(".firstname");
-    let lastname = document.querySelector(".lastname");
+    let city = document.querySelector(".ville");
+    let firstname = document.querySelector(".prenom");
+    let lastname = document.querySelector(".nom");
 
     envoyerBtn.addEventListener("click", function(e){
         e.preventDefault();
         if(checkRegex(letterFormat, firstname.value) 
         && checkRegex(letterFormat, lastname.value) 
         && checkRegex(adressFormat, address.value) 
-        && checkRegex(codePostalFormat, postal.value)
         && checkRegex(adressFormat, city.value) 
         && checkRegex(mailFormat, mail.value)){
             console.log("ok");
@@ -52,7 +50,6 @@ function listForm(){
                     firstName: firstname.value,
                     lastName: lastname.value,
                     address: address.value,
-                    codePostal: postal.value,
                     city: city.value,
                     email: mail.value,
                 },
@@ -71,8 +68,9 @@ function listForm(){
             .then(response => response.json())
             .then(data => {
                 localStorage.clear();
-                localStorage.setItem("orderID", data.orderID);
+                localStorage.setItem("orderID", data.orderId);
                 window.location.href = "confirm.html";
+               console.log(data);
             })
             .catch(error => console.error(error));
         }
@@ -83,30 +81,8 @@ function listForm(){
     });
 }
 
-/*function regex(){
-    if (!document.querySelector('#firstName').value.match(/^([a-zA-Zàâäéèêëïîôöùûüç' ]+)$/)){
-        alert('Le champs PRENOM contient des erreurs');
-        window.location ='panier.html';
-    } 
-    if (!document.querySelector('#lastName').value.match(/^([a-zA-Zàâäéèêëïîôöùûüç' ]+)$/)){
-        alert('Le champs NOM contient des erreurs');
-        window.location ='panier.html';
-    }
-    if(!document.querySelector('#address').value.match(/^([0-9]{1,3}(([,. ]?){1}[a-zA-Zàâäéèêëïîôöùûüç' ]+))$/)){
-        alert('Le champs ADRESSE contient des erreurs');
-        window.location ='panier.html';
-    }
-    if (!document.querySelector('#city').value.match(/^([a-zA-Zàâäéèêëïîôöùûüç' ]+)$/)){
-        alert('Le champs VILLE contient des erreurs');
-        window.location ='panier.html';
-    }
-    if (!document.querySelector('#mail').value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
-        alert('Le champs ADRESSE EMAIL contient des erreurs');
-        window.location ='panier.html';
-    }
-    console.log(regex + "connard");
-}
-*/
+
+
 function main()
 {
     var contentArray = JSON.parse(localStorage.getItem("panier"));
