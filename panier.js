@@ -15,7 +15,6 @@ function checkRegex(regex, input){
     }
 }
 
-
 function listForm(){
     let envoyerBtn = document.querySelector(".envoyer");
     const codePostalFormat = /^(([0-8][0-9])|(9[0-5]))[0-9]{3}$/;
@@ -44,7 +43,7 @@ function listForm(){
             for(i of storage){
                 product.push(i.id);
             }
-            console.log(product + "bitch");
+            console.log(product + "produit");
             let order = {
                 contact: {
                     firstName: firstname.value,
@@ -67,7 +66,7 @@ function listForm(){
             fetch("http://localhost:3000/api/teddies/order", options)
             .then(response => response.json())
             .then(data => {
-                localStorage.clear();
+                //localStorage.clear();
                 localStorage.setItem("orderID", data.orderId);
                 window.location.href = "confirm.html";
                console.log(data);
@@ -80,8 +79,6 @@ function listForm(){
         }
     });
 }
-
-
 
 function main()
 {
