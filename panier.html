@@ -12,7 +12,6 @@
         <nav>
             <a href="index.html">Accueil</a>
             <a href="panier.html">Panier</a>
-            <a href="confirm.html">Commande</a>
         </nav>
     </div>
 
@@ -27,6 +26,11 @@
                         <div id="price" class="info_panier">Prix de l'article</div>
                     </template>
                 </div>
+                <div class="footer_panier">
+                    <a href="index.html" class="continue_btn">Continuer mes achats</a>
+                    <span class="delete">Supprimer panier</span>
+                </div>
+
                 <h3 class="total p_panier">TOTAL</h3>
                     <div id="total_euro" class="info_panier">Prix total de la commande : 0.00€</div>
             </section>
@@ -36,11 +40,11 @@
             <div class="grid_commande">
                 <div class="flex_column firstname">
                     <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="firstname" class="prenom">
+                    <input type="text" id="firstname" name="firstname" class="prenom" minlength="3" maxlength="15">
                 </div>
                 <div class="flex_column lastname">
                     <label for="lastname">Nom</label>
-                    <input type="text" id="lastname" name="lastname" class="nom">
+                    <input type="text" id="lastname" name="lastname" class="nom" minlength="2" maxlength="15">
                 </div>
                 <div class="adresse_mail">
                     <label for="mail">Adresse e-mail</label>

@@ -139,6 +139,26 @@ nav
     display: flex;
     flex-direction: column;
 }
+.footer_panier
+{
+    display: flex;
+    justify-content: space-around;
+}
+.continue_btn
+{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.delete
+{
+    color: white;
+    border: 1px solid;
+    border-radius: 1rem;
+    background-color: red;
+    padding: 0.5rem;
+    cursor: pointer;
+}
 .adresse_mail
 {
     display: flex;
@@ -157,6 +177,10 @@ input
 {
     height: 2rem;
     border-radius: 0.5rem;
+}
+input:invalid:focus
+{
+    background: red;
 }
 .envoyer
 {
@@ -191,22 +215,25 @@ input
 {
     display: flex;
 }
-.commande
-{
-    text-align: center;
-}
-.commande_id
+.commande_id, .total
 {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
+/*--------- RESPONSIVE --------*/
 
 @media all and (max-width: 770px)
 {
     .main
     {
         grid-template-columns: 1fr 1fr;
+    }
+    .flexcommand
+    {
+        display: block;
     }
     .grid_commande
     {
@@ -246,6 +273,10 @@ input
     {
         align-items: center;
         padding: 0;
+    }
+    .delete
+    {
+        padding: 0.2rem;
     }
     .grid_commande
     {

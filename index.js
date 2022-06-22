@@ -21,28 +21,27 @@ function displayArticle(produit)
     clone.querySelector(".ours_picture").setAttribute("src", produit.imageUrl);
     clone.getElementById("ours_body").textContent = produit.description;
     clone.getElementById("ours_link").href += `?id=${produit._id}`;
-
     /*intègre le clone en récupérant "main" dans la page ainsi que son élément enfant "clone"*/
     document.getElementById("main").appendChild(clone);
+    
+    console.log("retour API OK" + " " + produit.name)
 }
 
-
-   /* for(couleur of produit.colors)
-    {
-        document.getElementById(produit._id).innerHTML += `
-        <option>${couleur}</option>`
-    }
-    }*/
-
-
-    async function main()
+async function main()
 {
     const articles = await getArticles()
-
     for (produit of articles) 
     {
         displayArticle(produit)
     }
+
+    // si le local storage ne contient pas de panier enregistré, le message d'alerte s'envoie et bloque la page panier
+    document.querySelector(".panier-link").addEventListener("click",(e)=>{
+        if(!localStorage.getItem("panier")){
+            e.preventDefault();
+            alert("Vous n'avez aucun article dans le panier");
+        }
+    })
 }
 
 main()
