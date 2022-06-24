@@ -30,6 +30,7 @@ function displayArticle(produit)
 async function main()
 {
     const articles = await getArticles()
+    // boucle affichant chaque produits de l'API
     for (produit of articles) 
     {
         displayArticle(produit)

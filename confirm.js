@@ -2,6 +2,7 @@ async function main()
 {
     var affichageProduit = JSON.parse(localStorage.getItem("panier"));
     let total = 0;
+    // boucle calculant le total de chaque article du panier
     for(article of affichageProduit){
         console.log(article.name + ' ' + article.price + '€');
         total = total + article.price;
@@ -11,7 +12,7 @@ async function main()
 
     document.querySelector('.commande_id').textContent = localStorage.getItem('orderID');
     document.querySelector('.total').textContent = total + '.00€';
-    /* on vide le localStorage pour recommencer le processus d'achat par la suite */
+    // on vide le localStorage pour recommencer le processus d'achat par la suite
     localStorage.clear();
 }
 

@@ -6,8 +6,7 @@ function getProduitId()
 }
 
 function getArticles()
-/*crée une fonction permettant de récupérer les info de l'API, de les convertirs en format 'json' et d'afficher une
-alerte error si le fetch ne fonctionne pas*/
+// crée une fonction permettant de récupérer les info de l'API, de les convertirs en format 'json' et d'afficher une alerte error si le fetch ne fonctionne pas
 {
     produitId = getProduitId();
     console.log("ID : " + produitId);
@@ -40,7 +39,7 @@ function displayArticle(produit)   /* place les bonnes données de l'API aux end
         <option value=""> -- Choisir un coloris -- </option>
     </select>`;
 
-    //affiche les couleurs disponible de l'id du produit ciblé
+    // affiche les couleurs disponible de l'id du produit ciblé
     for(couleur of produit.colors)
     {
         document.getElementById(produit._id).innerHTML += `
@@ -62,11 +61,13 @@ function pushArticle(article){
 
     document.querySelector(".add").addEventListener("click", function(){
         if(localStorage.getItem("panier")){
+            //si un panier est déjà existant on le récupère en ajoutant notre oursStorage
             let array = JSON.parse(localStorage.getItem("panier"));
             array.push(oursStorage);
             localStorage.setItem("panier", JSON.stringify(array));
         }
         else{
+            //sinon on envoi un tableau contenant notre oursStorage
             articleArray.push(oursStorage)
             localStorage.setItem("panier", JSON.stringify(articleArray));
         }

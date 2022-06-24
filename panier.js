@@ -30,12 +30,12 @@ function listForm(){
 
     envoyerBtn.addEventListener("click", function(e){
         e.preventDefault();
-        if(checkRegex(letterFormat, firstname.value) 
+        if(checkRegex(letterFormat, firstname.value) // si l'input est correct
             && checkRegex(letterFormat, lastname.value) 
             && checkRegex(adressFormat, address.value) 
             && checkRegex(adressFormat, city.value) 
             && checkRegex(mailFormat, mail.value)){
-            //méthode POST
+            //méthode POST, le tableau product contiendra un tableau d'objet qui sont les produits acheté, order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
             let product = [];
             let storage = JSON.parse(localStorage.getItem("panier"));
             for(i of storage){
@@ -54,7 +54,7 @@ function listForm(){
             }
             const options = {
                 method: "POST",
-                body: JSON.stringify(order),
+                body: JSON.stringify(order), // convertit les valeurs d'order en format JSON
                 headers: {
                     'Accept': 'application/json',
                     "Content-Type": "application/json"
@@ -81,6 +81,7 @@ function main()
 {
     var contentArray = JSON.parse(localStorage.getItem("panier"));
     let total = 0;
+    // boucle calculant le total de chaque article du panier
     for(article of contentArray){
         console.log(article.name + ' ' + article.price + '€');
         total = total + article.price;
@@ -90,7 +91,7 @@ function main()
     listForm();
     document.getElementById("total_euro").textContent = 'Prix total de votre commande : ' + total + '.00€';
 
-    //fonction de suppression de panier
+    // fonction de suppression du panier
     document.querySelector(".delete").addEventListener("click", function(){
         localStorage.clear();
         window.location.href = "index.html";
