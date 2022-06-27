@@ -1,32 +1,39 @@
-
-
-Bonjour, voici le plan de tests de mon projet n°5 :
-
+PLAN DE TEST ORINOCO
 
 
 	tests pour INDEX.JS
 
-- ligne 10 -> envoie un message d'alerte à l'écran si le fetch ne fonctionne pas
-- ligne 27 -> affiche les info voulues dans la console
+- ligne 01 -> récupère les produits sous forme de tableau d'objet // résultat attendu : liste d'objet en format JSON
+- ligne 10 -> envoie un message d'alerte à l'écran si le fetch ne fonctionne pas // cause : API non démarré, URL n'existe pas...
+- ligne 14 -> assigne les données de l'API au frontend // résultat attendu : affichage des produits // si erreur : vérifier code console / état API
+- ligne 27 -> affiche les données du produit voulue dans la console // résultat attendu :affiche le produit du lien
 - ligne 43 -> envoie un message d'alerte à l'écran si le panier est vide et que l'on clique sur le liens "panier"
 
 	tests pour PRODUIT.JS
 
+- ligne 01 -> assigne l'ID du produit à une constante
+- ligne 08 -> récupère un produit précis de l'ID passé en URL // résultat attendu : récupère les données du produit passé en paramètre // si erreur : vérifier ID ou liens
 - ligne 12 -> affiche l'ID du produit dans la console
 - ligne 19 -> envoie un message d'alerte à l'écran si le fetch ne fonctionne pas
+- ligne 23 -> affiche un seul produit dont l'ID est passé en paramètre
+- ligne 50 -> ajoute un produit dans le panier
 - ligne 58 -> affiche les info voulues dans la console
 - ligne 87 -> envoie un message d'alerte à l'écran si le panier est vide et que l'on clique sur le liens "panier"
 
 	tests pour PANIER.JS
 
+- ligne 20 -> controle du formulaire de commande // en cas d'erreur : voir message affiché
+- ligne 65 -> envoie de la commande 
 - ligne 71 -> envoie une erreur dans la console si il y a un problème lors de l'envoie de la requête
 - ligne 75 -> affiche une alerte si le formulaire n'est pas bien rempli
+- ligne 85 -> calcul le prix total du panier
 - ligne 86 -> affiche le nom et le prix de chaque article du panier dans la console
 - ligne 90 -> affiche le prix total calculé du panier dans la console
 - ligne 98 -> affiche une alerte confirmant la suppression du panier et le retour à l'acceuil
 
 	tests pour CONFIRM.JS
 
+- ligne 03 -> affiche la confirmation reçu par le backend
 - ligne 07 -> affiche le nom et le prix de chaque article du panier dans la console
 - ligne 10 -> affiche l'ID de la commande dans la console
 - ligne 11 -> affiche le prix total calculé du panier dans la console
