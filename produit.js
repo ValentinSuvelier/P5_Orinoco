@@ -76,11 +76,11 @@ function pushArticle(article){
 
 async function main()
 {
-    const produit = await getArticles()
+    const produit = await getArticles() // attend la résolution de la promesse
     displayArticle(produit);
     pushArticle(produit);
 
-     // si le local storage ne contient pas de panier enregistré, le message d'alerte s'envoie et bloque l'accès a la page panier
+    // si le local storage ne contient pas de panier enregistré, le message d'alerte s'envoie et bloque l'accès a la page panier
      document.querySelector(".panier-link").addEventListener("click",(e)=>{
         if(!localStorage.getItem("panier")){
             e.preventDefault();

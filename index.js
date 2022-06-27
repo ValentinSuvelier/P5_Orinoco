@@ -1,6 +1,6 @@
 function getArticles()
-/*crée une fonction permettant de récupérer les info de l'API, de les convertirs en format 'json' et d'afficher une
-alerte error si le fetch ne fonctionne pas*/
+/*crée une fonction permettant de récupérer les info de l'API,
+puis converti le body de la réponse http en format 'json' */
 {
     return fetch("http://localhost:3000/api/teddies")
     .then(function(httpBodyResponse){

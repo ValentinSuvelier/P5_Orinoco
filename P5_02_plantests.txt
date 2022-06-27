@@ -1,0 +1,32 @@
+
+
+Bonjour, voici le plan de tests de mon projet n°5 :
+
+
+
+	tests pour INDEX.JS
+
+- ligne 10 -> envoie un message d'alerte à l'écran si le fetch ne fonctionne pas
+- ligne 27 -> affiche les info voulues dans la console
+- ligne 43 -> envoie un message d'alerte à l'écran si le panier est vide et que l'on clique sur le liens "panier"
+
+	tests pour PRODUIT.JS
+
+- ligne 12 -> affiche l'ID du produit dans la console
+- ligne 19 -> envoie un message d'alerte à l'écran si le fetch ne fonctionne pas
+- ligne 58 -> affiche les info voulues dans la console
+- ligne 87 -> envoie un message d'alerte à l'écran si le panier est vide et que l'on clique sur le liens "panier"
+
+	tests pour PANIER.JS
+
+- ligne 71 -> envoie une erreur dans la console si il y a un problème lors de l'envoie de la requête
+- ligne 75 -> affiche une alerte si le formulaire n'est pas bien rempli
+- ligne 86 -> affiche le nom et le prix de chaque article du panier dans la console
+- ligne 90 -> affiche le prix total calculé du panier dans la console
+- ligne 98 -> affiche une alerte confirmant la suppression du panier et le retour à l'acceuil
+
+	tests pour CONFIRM.JS
+
+- ligne 07 -> affiche le nom et le prix de chaque article du panier dans la console
+- ligne 10 -> affiche l'ID de la commande dans la console
+- ligne 11 -> affiche le prix total calculé du panier dans la console
